@@ -1,0 +1,25 @@
+
+body{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+form {
+
+    top: 10em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

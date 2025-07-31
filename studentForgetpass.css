@@ -1,0 +1,88 @@
+
+.main {
+background-image: url("TPC-IMAGES/bgggg.jpeg");
+height: 87vh;
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.headers {
+background: linear-gradient(to top, #0630C2, #FFFFFF); /* Correct gradient colors */
+height: 10vh;
+width: 100%;
+color: black;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.header1 {
+height: 10vh;
+display: flex;
+width: 40%;
+}
+.header2 {
+height: 10vh;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 10vh;
+}
+.headerIMG, .text-headers {
+font-size: 30px;
+height: 10vh;
+width: 10%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.img1 {
+height: 80%;
+width: 100%;
+}
+.main {
+
+height: 87vh;
+width: 100%;
+}
+/* Shared button styles for Back and Login buttons */
+button, .back-button {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #007BFF;
+color: #fff;
+text-align: center;
+text-decoration: none; /* Removes underline */
+border-radius: 5px;
+font-size: 16px;
+font-family: 'Arial', sans-serif; /* Matches font consistency */
+cursor: pointer;
+width: 150px; /* Matches button width */
+height: 50px; /* Matches button height */
+transition: background-color 0.3s ease;
+}
+button:hover, .back-button:hover {
+background-color: #0056b3;
+}
+/* Clickable icon styles */
+.back-link {
+text-decoration: none; /* Removes underline */
+color: #007BFF;
+cursor: pointer;
+transition: color 0.3s ease;
+}
+.back-link:hover {
+color: #0056b3; /* Changes color on hover */
+}
+.container{
+  text-align: center;
+  
+  height: 40vh;
+  width: 38%;
+  background-color: white;
+  border-radius: 5%;
+}

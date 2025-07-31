@@ -1,0 +1,167 @@
+.html{
+  padding: 0%;
+  margin: 0%;
+}
+.main{
+  background-image: url("TPC-IMAGES/bgggg.jpeg");
+  height: 87vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+.headers{
+
+  background: linear-gradient(to top, #0630C2, #FFFFFF); /* Correct gradient colors */
+  height: 10vh;
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header1{
+
+  height: 10vh;
+  display: flex;
+  width: 40%;
+}
+.header2{
+  
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vh;
+}
+.headerIMG, .text-headers{
+
+    font-size: 30px;
+    height: 10vh;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img1{
+  height: 80%;
+  width: 100%;
+}
+.submain{
+  
+   height: 79vh;
+   width: 60%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.mainsub{
+  
+  border: 1px solid black;
+  background-color: white;
+  height: 75vh;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainsub1, .mainsub2{
+ 
+  height: 75vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 80%; /* Adjust to fit within your .mainsub1 */
+  max-width: 300px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #02279D;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+.mainsub2{
+  background: linear-gradient(to top, #0630C2, #FFFFFF); 
+ 
+}
+.forgot-password-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #007bff;
+  text-decoration: none;
+  text-align: right;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #02279D;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 85%;
+}
+
+.back-button:hover {
+  background-color: #4cae4c;
+}

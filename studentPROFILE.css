@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main-header {
+    border-bottom: 1px solid #ccc;
+}
+
+.img-main {
+    height: 8vh;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.user-role {
+    font-size: 16px;
+    color: #0078D4; /* Blue color for the text */
+    margin-right: 15px;
+}
+
+.logout-button {
+    background-color: #0033cc; /* Dark blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #0055ff; /* Lighter blue on hover */
+}
+
+.sub-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+.sub-header {
+    width: 97%;
+    display: flex;
+    align-items: center;
+    background-color: #0033cc; /* Blue background */
+    padding: 10px 20px;
+    color: white;
+    height: 50px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.home-section {
+    display: flex;
+    align-items: center;
+}
+
+.home-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.home-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.img-home {
+    height: 30px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .profile-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .profile-header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  .profile-header p {
+    margin: 5px 0 0;
+    color: #666;
+  }
+  .section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section div {
+    width: 48%;
+  }
+  .section label {
+    font-size: 14px;
+    color: #666;
+  }
+  .section input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+/* Side Menu */
+.side-menu {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px; /* Width of the side menu */
+    height: 100%;
+    background-color: #0033cc; /* Blue background */
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.side-menu .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin: 15px 0;
+}
+
+.side-menu ul li.menu-section-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    display: block;
+    background-color: #cce0ff; /* Light blue for buttons */
+    color: #003366; /* Dark blue text */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+    background-color: #b3ccff; /* Slightly darker on hover */
+}
+
+/* Open and Close Animations */
+.side-menu.open {
+    display: block;
+    animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.main{
+    border: 1px solid red;
+    height: 10vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    border: 1px solid red;
+    height: 10vh;
+    width: 25%;
+}
+.right{
+    border: 1px solid red;
+    height: 10vh;
+    width: 25%;
+}
