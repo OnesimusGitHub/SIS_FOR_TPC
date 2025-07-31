@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    max-width: 100%; /* Ensure the body takes up the full width */
+    padding-top: 80px; /* Add padding to prevent overlap with the fixed header */
+}
+.header1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%; /* Ensure the header spans the full width */
+    margin: 0 auto; /* Center the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000; /* Ensures the header stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+}
+.d{
+    opacity: 0;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.img1 {
+    height: 50px; /* Adjusted height for better alignment */
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.admin-form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-top: 20px; /* Add spacing below the header */
+}
+
+.admin-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.admin-form button {
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-form button:hover {
+    background-color: #16324a;
+}
+
+.admin-announcements {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-top: 20px; /* Add spacing below the header */
+}
+
+.announcement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.announcement-card {
+    background-color: #1e3a5f; /* Dark blue background */
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.announcement-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.announcement-time {
+    font-size: 0.9rem;
+    color: #b0c4de; /* Light gray text */
+}
+
+.edit-button, .delete-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #004080;
+}
+
+.delete-button {
+    background-color: #d9534f;
+}
+
+.delete-button:hover {
+    background-color: #c9302c;
+}
+
+.delete-all-button {
+    background-color: #d9534f; /* Red background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.delete-all-button:hover {
+    background-color: #c9302c; /* Darker red on hover */
+}

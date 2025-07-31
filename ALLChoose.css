@@ -1,0 +1,239 @@
+.html{
+    padding: 0%;
+    margin: 0%;
+}
+.main{
+   
+    height: 87vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+
+}
+.headers{
+
+  background: linear-gradient(to top, #0630C2, #FFFFFF); /* Correct gradient colors */
+  height: 10vh;
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header1{
+
+  height: 10vh;
+  display: flex;
+  width: 40%;
+}
+.header2{
+ 
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10vh;
+}
+.headerIMG, .text-headers{
+ 
+    font-size: 30px;
+    height: 10vh;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img1{
+  height: 80%;
+  width: 100%;
+}
+.main-sub{
+    
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('TPC-IMAGES/bgggg.png');    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+.card {
+    width: 250px;
+    height: 254px;
+    background: linear-gradient(to top, #0630C2, #FFFFFF);
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    font-size: 30px;
+    font-weight: 900;
+  
+    
+  }
+  
+  .card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+    background: rgb(103, 151, 255);
+  }
+  
+  .first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+  }
+  
+  .card:hover .first-content {
+    height: 0px;
+    opacity: 0;
+  }
+  
+  .second-content {
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    font-size: 0px;
+    transform: rotate(90deg) scale(-1);
+  }
+  
+  .card:hover .second-content {
+    opacity: 1;
+    height: 100%;
+    font-size: 1.8rem;
+    transform: rotate(0deg);
+  }
+  .second-content {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Inherits the text color from the parent */
+  }
+  
+  .second-content:hover {
+    color: #000;           /* Optional: Add hover effect (black color in this case) */
+  }
+  .back-link {
+    text-decoration: none; /* Removes underline */
+    color: rebeccapurple; /* Sets the icon color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .back-link:hover {
+    color: #0056b3; /* Changes color on hover */
+  }
+  
+/* Existing styles remain unchanged... */
+
+
+/* Mobile view (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Headers */
+  .headers {
+    flex-direction: column; /* Stack header elements vertically */
+    height: auto;
+    padding: 15px; /* Add padding for better spacing */
+    background: linear-gradient(to bottom, #0630C2, #FFFFFF); /* Adjust gradient for better visibility */
+  }
+
+  .header1, .header2 {
+    width: 100%; /* Full width for header sections */
+    height: auto;
+    justify-content: center;
+    border: none; /* Remove borders for cleaner look */
+    margin-bottom: 10px; /* Add spacing between header sections */
+  }
+
+  .headerIMG, .text-headers {
+    width: auto;
+    font-size: 18px; /* Adjust font size for smaller screens */
+    border: none;
+    text-align: center; /* Center-align text */
+  }
+
+  .img1 {
+    height: 40px; /* Reduce logo size */
+    width: auto;
+  }
+
+  /* Main Content */
+  .main {
+    flex-direction: column; /* Stack main content vertically */
+    height: auto;
+    padding: 15px; /* Add padding for better spacing */
+  }
+
+  .main-sub {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Add spacing between cards */
+    height: auto;
+    background-size: cover; /* Ensure background image covers the area */
+    background-position: center; /* Center the background image */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  /* Cards */
+  .card {
+    width: 95%; /* Make cards take most of the screen width */
+    height: auto; /* Adjust height automatically */
+    font-size: 18px; /* Adjust font size */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for cleaner look */
+    border-radius: 8px; /* Slightly rounded corners */
+    overflow: hidden; /* Ensure content stays inside the card */
+  }
+
+  .card:hover {
+    transform: none; /* Disable scaling on hover for mobile */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Keep consistent shadow */
+  }
+
+  .first-content, .second-content {
+    font-size: 14px; /* Adjust font size for content */
+    padding: 10px;
+    text-align: center; /* Center-align content */
+  }
+
+  .second-content {
+    transform: none; /* Disable rotation for mobile */
+    font-size: 16px; /* Slightly larger font for links */
+  }
+
+  /* Back Link */
+  .back-link {
+    font-size: 16px; /* Adjust back-link icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Add spacing below the back link */
+  }
+
+  .back-link:hover {
+    color: #003d99; /* Slightly darker hover color */
+  }
+
+  /* General Adjustments */
+  body {
+    font-size: 14px; /* Adjust base font size for readability */
+    line-height: 1.5; /* Improve line spacing */
+  }
+
+  img {
+    max-width: 100%; /* Ensure images do not overflow */
+    height: auto; /* Maintain aspect ratio */
+  }
+}

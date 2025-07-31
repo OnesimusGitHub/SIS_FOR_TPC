@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <title>Landing page</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        padding-top: 80px; /* Adjust based on the height of the header */
+        max-width: 100%; /* Ensure the body takes up the full width */
+    }
+    .header1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%; /* Ensure the header spans the full width */
+        margin: 0 auto; /* Center the header */
+        z-index: 1000; /* Ensures the header stays above other elements */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better separation */
+    }
+    .d{
+        opacity: 0;
+    }
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .header-left .img1 {
+        height: 50px;
+    }
+    
+    .site-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+    }
+    
+    .header-right {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .nav-links a.about {
+        background-color: #001F54;
+        color: white;
+    }
+    
+    .nav-links a:hover {
+        background-color: #f0f0f0;
+        color: #001F54;
+    }
+    
+    .dropdown {
+        position: relative;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        z-index: 1;
+        min-width: 150px;
+    }
+    
+    .dropdown-content a {
+        color: black;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+        font-size: 14px;
+    }
+    
+    .dropdown-content a:hover {
+        background-color: #f0f0f0;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown:hover .about {
+        background-color: #001F54;
+        color: white;
+    }
+    
+    .loginportal {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .loginportal a:hover {
+        background-color: #f0f0f0;
+        color: #001F54;
+    }
+    
+    .home, .aboutus, .loginportal, .program {
+        cursor: pointer; /* Makes the divs clickable */
+        text-align: center;
+        padding: 10px;
+        
+        
+        margin: 5px;
+        transition: background-color 0.3s ease;
+        border-radius: 0%;
+    }
+    .nav-links a:hover,
+    .nav-links .about {
+        background-color: #001f54;
+        color: white;
+    }
+    
+    .main {
+        position: relative; /* Enable layering for opacity effect */
+        height: 50vh; /* Adjust height for better visibility */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white; /* Ensure text is readable on the background */
+        background-size: cover; /* Ensure the image covers the entire section */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent tiling */
+        padding: 20px;
+        /* Removed background-image from here */
+    }
+    
+    .main::before {
+        content: ""; /* Add an overlay */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('TPC-IMAGES/ahj.png'); /* Background image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5; /* Set opacity to 50% */
+        z-index: 1; /* Place it behind the content */
+    }
+    
+    .main-content {
+        position: relative; /* Ensure content is above the overlay */
+        z-index: 2; /* Place content above the background */
+    }
+    
+    .main-content h1 {
+        font-size: 3rem; /* Larger heading */
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+    }
+    
+    .main-content p {
+        font-size: 1.2rem; /* Slightly larger font size */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+        margin-bottom: 0; /* Adjust spacing */
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateY(50px); /* Start slightly below */
+            opacity: 0; /* Start invisible */
+        }
+        to {
+            transform: translateY(0); /* End at the original position */
+            opacity: 1; /* Fully visible */
+        }
+    }
+    .content {
+        padding: 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 800px;
+    }
+    
+    .content h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    .programs {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .program-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+        background-color: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .program-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .program-label {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .history-details {
+        padding: 40px 20px;
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 40px auto;
+        line-height: 1.8;
+        color: #333;
+    }
+    
+    .history-details h2 {
+        font-size: 2rem;
+        color: #001F54;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+    }
+    
+    .history-details p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .history-details p strong {
+        font-weight: bold;
+        color: #001F54;
+    }
+    
+    .features {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: space-between; /* Adjust spacing between items */
+        margin-top: 20px;
+        gap: 15px; /* Reduced gap for better fit */
+    }
+    
+    .feature-box {
+        flex: 1 1 calc(30% - 10px); /* Adjusted width for better fit */
+        max-width: 280px; /* Slightly reduced max width */
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Center-align text */
+    }
+    
+    .feature-box h3 {
+        font-size: 1.5rem; /* Larger font size for feature titles */
+        color: #0630C2; /* Dark blue color */
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .feature-box p {
+        font-size: 1rem; /* Standard font size for feature descriptions */
+        color: #555; /* Medium gray color */
+        line-height: 1.6; /* Improve readability */
+    }
+    
+    .highlight-box {
+        margin-top: 20px;
+        padding: 10px; /* Reduced padding */
+        border: 1px solid #0630C2; /* Thinner border */
+        background-color: #fff;
+        color: #0630C2;
+        font-size: 0.9rem; /* Smaller font size */
+        text-align: left;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+        line-height: 1.4; /* Adjusted line height */
+        border-radius: 5px; /* Smaller rounded corners */
+    }
+    
+    .responsive-box {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #0056b3; /* New lighter blue background */
+        color: #ffffff; /* White text for better contrast */
+        font-size: 1.2rem; /* Slightly larger font size */
+        text-align: center;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+        line-height: 1.8; /* Improve readability */
+        font-weight: bold; /* Bold text for emphasis */
+    }
+    
+    .responsive-box p {
+        margin: 0;
+        line-height: 1.8; /* Improve readability */
+    }
+    
+    @media (max-width: 768px) {
+        .features {
+            flex-direction: column; /* Stack feature boxes vertically on smaller screens */
+            align-items: center;
+        }
+    
+        .feature-box {
+            width: 100%; /* Full width for smaller screens */
+        }
+    
+        .content {
+            width: 100%; /* Ensure full width on smaller screens */
+        }
+    
+        .header1 {
+            height: auto; /* Adjust height for smaller screens */
+            flex-direction: column; /* Stack header content vertically */
+            padding: 10px; /* Add padding for better spacing */
+            text-align: center; /* Center-align header content */
+        }
+    
+        .header-left, .header-right {
+            width: 100%; /* Full width for smaller screens */
+            text-align: center; /* Center-align content */
+            border: none; /* Remove borders for cleaner look */
+        }
+    
+        .img1 {
+            width: 15%; /* Adjust image size for smaller screens */
+            height: auto;
+        }
+    
+        .home, .aboutus, .loginportal {
+            padding: 8px; /* Reduce padding for smaller buttons */
+            font-size: 0.9rem; /* Adjust font size */
+            margin: 0 auto; /* Center the buttons horizontally */
+            display: inline-block; /* Ensure proper alignment */
+        }
+    
+        .features {
+            flex-direction: column; /* Stack feature boxes vertically */
+            align-items: center;
+        }
+    
+        .feature-box {
+            width: 100%; /* Full width for smaller screens */
+            margin-bottom: 15px; /* Add spacing between boxes */
+        }
+    
+        .content {
+            width: 100%; /* Ensure full width on smaller screens */
+        }
+    
+        .footer {
+            flex-direction: column; /* Stack footer sections vertically */
+            align-items: center;
+            text-align: center; /* Center-align text */
+        }
+    
+        .footer-left, .footer-right {
+            width: 100%; /* Full width for smaller screens */
+            margin-bottom: 20px; /* Add spacing between sections */
+        }
+    
+        .social-icons {
+            justify-content: center; /* Center-align social icons */
+        }
+    }
+    .content2{
+        border: none; /* Removed unnecessary border */
+        min-height: auto; /* Adjusted to fit content dynamically */
+        margin: 20px auto; /* Reduced margin */
+        width: 90%; /* Centered and aligned */
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9); /* Added background for consistency */
+        padding: 20px; /* Adjusted padding for better spacing */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    }
+    
+    .content2 h2 {
+        font-size: 1.8rem;
+        color: #0630C2;
+        margin-bottom: 10px;
+    }
+    
+    .content2 .view-all {
+        font-size: 1rem;
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        background-color: #00274d; /* Dark blue background */
+        color: #ffffff; /* White text for readability */
+        padding: 20px 40px;
+        font-family: Arial, sans-serif;
+    }
+    
+    .footer-left {
+        width: 50%;
+    }
+    
+    .footer-left img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-left h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .footer-left p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .footer-right {
+        width: 40%;
+        text-align: left;
+    }
+    
+    .footer-right h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .footer-right p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .social-icons {
+        display: flex;
+        gap: 10px;
+        margin: 10px 0;
+    }
+    
+    .social-icons a img {
+        width: 30px;
+        height: 30px;
+        transition: transform 0.3s ease;
+    }
+    
+    .social-icons a img:hover {
+        transform: scale(1.1);
+    }
+    
+    .footer-right h4 {
+        margin-top: 20px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    /* Change background color when scrolling */
+    body:has(.header1.scrolled) .header1 {
+        background: linear-gradient(to top, #0630C2, #FFFFFF); /* Correct gradient colors */
+    }
+    
+    
+    .history-details {
+        padding: 40px 20px;
+        background-color: #f9f9f9;
+        font-family: Arial, sans-serif;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 40px auto;
+        line-height: 1.8;
+        color: #333;
+    }
+    
+    .history-details h2 {
+        font-size: 2rem;
+        color: #001F54;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 10px;
+    }
+    
+    .history-details p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .history-details p strong {
+        font-weight: bold;
+        color: #001F54;
+    }
+    
+   
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .about-box, .vision, .mission {
+            width: 100%; /* Ensure full width on smaller screens */
+        }
+    }
+</style>
+<body>
+    <div class="header1">
+        <div class="header-left">
+            <img class="img1" src="TPC-IMAGES/logos-removebg-preview.png" alt="SIS-TPC Logo">
+            <span class="site-title">SIS-TPC</span>
+        </div>
+        <div class="header-right">
+            <div class="nav-links">
+                <a href="homepage.html" class="home">Home</a>
+                <a href="program.html" class="program">Programs</a>
+                <div class="dropdown">
+                    <a class="about">About Us &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="history.html">Our History</a>
+                        <a href="about.html">Mission And Vision</a>
+                        <a href="hymn.html">TPC Hymn</a>
+                    </div>
+                </div>
+                <a href="ALLChoose.html" class="loginportal">Login Portal &#x1F517;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>History</h1>
+        <div class="programs">
+            <div class="program-card">
+                <img src="TPC-IMAGES/contain.png" alt="Picture of Founder of TPC">
+                <div class="program-label">Picture Of Founder Of TPC</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="history-details">
+        <h2>History Of TPC</h2>
+        <p>
+            Trinity Polytechnic College, located in Novaliches, Quezon City, is a private, non-profit, and church-related institution, founded in 1963, and is the first full-fledged educational institution organized from the concordat of the Episcopal Church in the Philippines and the Iglesia Filipina Independiente. 
+        </p>
+        <p>
+            Trinity Polytechnic College, formerly known as Trinity College of Quezon City, was established in 1963 as an elementary, high school, and collegiate educational institution by the Protestant Episcopalians. 
+        </p>
+        <p>
+            The college's establishment was made possible by a trust fund established by the Matthews and Gamble families, who were interested in the missionary work of the Episcopal Church. 
+        </p>
+        <p>
+            In 1963, the Capitol City College was renamed Trinity College of Quezon City, after Trinity College (Connecticut), USA, whose then president was Bishop Ogilby's father.
+        </p>
+        <p>
+            <strong>Mission and Vision:</strong> The institution aims to provide a comprehensive education with a focus on Christian values and preparing students for leadership roles in a humane society.
+        </p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="TPC-IMAGES/logos-removebg-preview.png" alt="Trinity Polytechnic College Logo">
+            <h3>Trinity Polytechnic College</h3>
+            <p>@ Directory</p>
+            <p><strong>Novaliches Campus:</strong> 892 Alfina Building, Quirino Highway, Brgy. Gulod, Novaliches, Quezon City</p>
+            <p><strong>North Caloocan Campus:</strong> Bow Valley College</p>
+        </div>
+        <div class="footer-right">
+            <h3>Contact Us</h3>
+            <p>Email: tpcnova@gmail.com</p>
+            <p>Phone: 0927-805-1652 / 0947-3646-906</p>
+            <div class="social-icons">
+                <a href="#"><img src="TPC-IMAGES/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="TPC-IMAGES/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="TPC-IMAGES/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="TPC-IMAGES/linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+            <h4>Resources</h4>
+            <p>Facebook | Twitter | Instagram</p>
+        </div>
+    </footer>
+    <script src="about.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS
+    </script>
+</body>
+</html>
+``` 

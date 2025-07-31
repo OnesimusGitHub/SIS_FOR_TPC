@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="program.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <title>Landing page</title>
+</head>
+<body>
+    <div class="header1">
+        <div class="header-left">
+            <img class="img1" src="TPC-IMAGES/logos-removebg-preview.png" alt="SIS-TPC Logo">
+            <span class="site-title">SIS-TPC</span>
+        </div>
+        <div class="header-right">
+            <div class="nav-links">
+                <a href="homepage.php" class="home">Home</a>
+                <a href="program.php" class="program">Programs</a>
+                <div class="dropdown">
+                    <a>About Us &#9662;</a>
+                    <div class="dropdown-content">
+                        <a href="about.php">Missioan And Vision</a>
+                        <a href="hymn.php">TPC Hymn</a>
+                    </div>
+                </div>
+                <a href="ALLChoose.php" class="loginportal">Login Portal &#x1F517;</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main-content">
+            <h1>Explore Our Programs</h1>
+            <p>Discover the wide range of programs we offer to help you achieve your academic and career goals.</p>
+           
+        </div>
+    </div>
+    <div class="content">
+        <h1>Senior High School Tracks</h1>
+        <p>Be college-ready with the knowledge, training, and preparation to pursue a degree, start a business, or gain employment.</p>
+        <h1>Academic Track</h1>
+        <p>The Academic Track is designed for students who want to pursue higher education. It offers four strands: Science, Technology, Engineering and Mathematics (STEM), Humanities and Social Sciences (HUMSS), Accountancy, Business and Management (ABM), and General Academic Strand (GAS).</p>
+        <div class="track-container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="track-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+                <div class="track-box-content">
+                    <h2>STEM</h2>
+                    <p>Science, Technology, Engineering and Mathematics</p>
+                    <p>STEM is an approach to learning and development that integrates the areas of science, technology, engineering and mathematics.</p>
+                </div>
+                <img src="TPC-IMAGES/STEM.jpg" alt="STEM Image" class="track-image">
+            </div>
+            <div class="track-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+                <div class="track-box-content">
+                    <h2>HUMSS</h2>
+                    <p>Humanities and Social Sciences</p>
+                    <p>The Humanities and Social Sciences (HUMSS) strand covers topics in the liberal arts, training students to think, write, and speak about various humanistic and societal concerns.</p>
+                </div>
+                <img src="TPC-IMAGES/HUMMS.jpg" alt="HUMSS Image" class="track-image">
+            </div>
+            <div class="track-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+            <div class="track-box-content">
+                <h2>ABM</h2>
+                <p>Accountancy, Business and Management</p>
+                <p>The ABM strand focuses on the basic concepts of financial management, business management, corporate operations, and all things that are accounted for in running a business.</p>
+            </div>
+            <img src="TPC-IMAGES/ABM.jpg" alt="ABM Image" class="track-image">
+            </div>
+            
+            <div class="track-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+                <div class="track-box-content">
+                <h2>GAS</h2>
+                <p>General Academic Strand</p>
+                <p>The GAS strand is designed for students who are undecided on which track to take. It offers a mix of subjects from different strands.</p>
+                </div>
+            <img src="TPC-IMAGES/Gas.jpg" alt="GAS Image" class="track-image">
+             </div>
+        </div>
+        <h1>Technical-Vocational-Livelihood Track</h1>
+        <p>A curriculum that is a combination of Core Courses and specialized hands-on courses that meets the competency-based assessment of TESDA.</p>
+        <div class="track-container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="track-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+                <div class="track-box-content">
+                    <h2>ICT</h2>
+                    <p>INFORMATION & COMMUNICATIONS TECHNOLOGY</p>
+                    <p>Under ICT curriculum, students will learn how to write programs and design websites. This will also help them hone their skills in animation and illustration which will help them thrive in the creative field.</p>
+                </div>
+                <img src="TPC-IMAGES/ICT.jpg" alt="ICT Image" class="track-image">
+            </div>
+            <div class="track-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+                <div class="track-box-content">
+                    <h2>HE</h2>
+                    <p>Home Economics</p>
+                    <p>Track that teaches students job-ready skills and knowledge for livelihood projects. The HE strand is part of the Technical-Vocational-Livelihood (TVL).</p>
+                </div>
+                <img src="TPC-IMAGES/HE.jpg" alt="HE Image" class="track-image">
+            </div>
+            <div class="track-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="50">
+                <div class="track-box-content">
+                    <h2>IA</h2>
+                    <p>Industrial Arts</p>
+                    <p>The IA strand equips students with technical skills in carpentry, electronics, and other industrial fields, preparing them for hands-on careers.</p>
+                </div>
+                <img src="TPC-IMAGES/IA.jpg" alt="IA Image" class="track-image">
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="TPC-IMAGES/logos-removebg-preview.png" alt="Trinity Polytechnic College Logo">
+            <h3>Trinity Polytechnic College</h3>
+            <p>@ Directory</p>
+            <p><strong>Novaliches Campus:</strong> 892 Alfina Building, Quirino Highway, Brgy. Gulod, Novaliches, Quezon City</p>
+            <p><strong>North Caloocan Campus:</strong> Bow Valley College</p>
+        </div>
+        <div class="footer-right">
+            <h3>Contact Us</h3>
+            <p>Email: tpcnova@gmail.com</p>
+            <p>Phone: 0927-805-1652 / 0947-3646-906</p>
+            <div class="social-icons">
+                <a href="#"><img src="TPC-IMAGES/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="TPC-IMAGES/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="TPC-IMAGES/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="TPC-IMAGES/linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+            <h4>Resources</h4>
+            <p>Facebook | Twitter | Instagram</p>
+        </div>
+    </footer>
+    <script src="program.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS
+    </script>
+</body>
+</html>
